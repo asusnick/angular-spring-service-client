@@ -1,4 +1,6 @@
 import {Component, Input} from '@angular/core';
+import { NgModule } from '@angular/core';
+import { UserInputTableComponent } from './components/user-input-table/user-input-table.component';
 
 @Component({
   selector: 'app-root',

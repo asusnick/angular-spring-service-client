@@ -1,6 +1,8 @@
 import {Component, OnInit, Input} from '@angular/core';
 import {UserModel} from '../../models/user.model';
 import {AddUserService} from '../../services/add-user.service';
+import { NgModule } from '@angular/core';
+
 
 @Component({
   selector: 'app-user-input-table',

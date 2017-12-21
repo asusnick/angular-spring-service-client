@@ -1,11 +1,19 @@
 import { TestBed, async } from '@angular/core/testing';
 import { AppComponent } from './app.component';
+import { UserInputTableComponent } from './components/user-input-table/user-input-table.component';
+import { FormsModule } from '@angular/forms';
+import {AddUserService} from './services/add-user.service';
+import { HttpModule } from '@angular/http';
+
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+       imports: [ FormsModule, HttpModule ],
       declarations: [
-        AppComponent
+        AppComponent,
+        UserInputTableComponent,
       ],
+      providers:[AddUserService]
     }).compileComponents();
   }));
   it('should create the app', async(() => {
@@ -22,6 +30,6 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('h1').textContent).toContain('Welcome to app!');
+    expect(compiled.querySelector('h1').textContent).toContain('app');
   }));
 });

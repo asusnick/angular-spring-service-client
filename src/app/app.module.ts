@@ -3,13 +3,9 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
-
-
 import { AppComponent } from './app.component';
 import { UserInputTableComponent } from './components/user-input-table/user-input-table.component';
 import { AddUserService } from './services/add-user.service';
-
-
 
 
 @NgModule({
@@ -20,7 +16,7 @@ import { AddUserService } from './services/add-user.service';
   imports: [
     HttpModule,
     BrowserModule,
-    FormsModule
+    FormsModule,
   ],
   providers: [
     AddUserService

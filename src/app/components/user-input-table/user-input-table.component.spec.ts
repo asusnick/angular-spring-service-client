@@ -1,4 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { FormsModule } from '@angular/forms';
+import {AddUserService} from '../../services/add-user.service';
+import { HttpModule } from '@angular/http';
 
 import { UserInputTableComponent } from './user-input-table.component';
 
@@ -8,7 +11,11 @@ describe('UserInputTableComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ UserInputTableComponent ]
+      imports: [ FormsModule,
+        HttpModule ],
+      declarations: [
+        UserInputTableComponent ],
+      providers:[AddUserService]
     })
     .compileComponents();
   }));
